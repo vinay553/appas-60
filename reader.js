@@ -63,28 +63,29 @@ zoom.addEventListener('click', () => {
   positionScan();
 });
 
-async function loadArticle() {
+function loadArticle() {
   try {
-    const response = await fetch('articles.json');
-    if (!response.ok) throw new Error('Transcriptions unavailable');
-    const articles = await response.json();
-    const article = Object.hasOwn(articles, articleKey) ? articles[articleKey] : null;
-    if (!article) {
-      document.querySelector('#article-title').textContent = 'Article not found';
-      document.querySelector('#transcription-note').textContent = 'Return to the front page to choose one of the available transcriptions.';
+    const entries = [...document.querySelectorAll('.transcript-entry')];
+    const selected = entries.find((entry) => entry.id === articleKey);
+    if (!selected) {
+      document.querySelector('#transcription-note').textContent = 'Choose an article from the front page, or read the transcriptions below.';
       showPage(1);
       return;
     }
+    const article = {
+      title: selected.dataset.title,
+      byline: selected.dataset.byline,
+      page: Number(selected.dataset.page),
+      continuation: Number(selected.dataset.continuation)
+    };
+    entries.forEach((entry) => { entry.hidden = entry !== selected; });
     document.querySelector('#article-title').textContent = article.title;
     document.title = `${article.title} · The Sunday Standard`;
     document.querySelector('#article-byline').textContent = article.byline;
-    document.querySelector('#transcription-note').textContent = article.note;
-    const content = document.querySelector('#article-text');
-    article.paragraphs.forEach((text) => {
-      const paragraph = document.createElement('p');
-      paragraph.textContent = text;
-      content.append(paragraph);
-    });
+    document.querySelector('#transcription-note').textContent = selected.querySelector('.transcript-note').textContent;
+    selected.querySelector('h2').hidden = true;
+    selected.querySelector('.transcript-byline').hidden = true;
+    selected.querySelector('.transcript-note').hidden = true;
     document.querySelector('#back-link').href = `index.html#${articleKey === 'brighter' || articleKey === 'beatles' || articleKey === 'aliyar' ? articleKey : 'front-page'}`;
     startingPage = article.page;
     if (articleKey === 'brighter') positions.brighter = [0, 0.25];
@@ -99,9 +100,8 @@ async function loadArticle() {
     }
     showPage(article.page);
   } catch {
-    document.querySelector('#article-title').textContent = 'Transcription unavailable';
-    document.querySelector('#transcription-note').textContent = 'The article text could not load. Please reload the page or compare with the original scan below.';
-    showPage(1);
+    document.querySelectorAll('.transcript-entry').forEach((entry) => { entry.hidden = false; });
+    document.querySelector('#transcription-note').textContent = 'The original transcriptions are included below.';
   }
 }
 

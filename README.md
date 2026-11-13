@@ -6,7 +6,7 @@ Live: https://vinay553.github.io/appas-60/
 
 Buildless HTML, CSS and JavaScript. GitHub Pages serves the main branch root. No installation required.
 
-Each Read more button opens a separate article reader at article.html?article=<key>. The reader displays selectable text from articles.json first, followed by a collapsed original-scan comparison. The article text is a best-effort OCR transcription checked against the scan; uncertain passages are marked [unclear], and incomplete transcription coverage is described per article. A Brighter Tomorrow is transcribed in full from the page-six editorial. All 16 locally stored scans remain available in the comparison reader.
+Each Read more button opens the article reader at article.html?article=<key>#<key>. Transcriptions are embedded directly in the HTML so reading does not depend on JavaScript or a JSON fetch. JavaScript selects the requested article and enhances the collapsed original-scan comparison. articles.json is the transcription source; keep its text in sync with the embedded sections. Reader script URLs are versioned to avoid stale GitHub Pages browser caches. Uncertain passages are marked [unclear], and incomplete transcription coverage is described per article. A Brighter Tomorrow is transcribed in full from the page-six editorial. All 16 locally stored scans remain available in the comparison reader.
 
 ## Sources
 
