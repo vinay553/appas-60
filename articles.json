@@ -53,30 +53,6 @@
       "Turn to page 7, col. 7."
     ]
   },
-  "davis": {
-    "title": "India lead 2–0 in Davis Cup",
-    "byline": "NEW DELHI, Nov. 12",
-    "page": 1,
-    "continuation": 11,
-    "note": "Front-page report transcribed from the scan. The opening dateline is printed as New Delhi; the match is against West Germany. The last line refers readers to page 11 for details.",
-    "paragraphs": [
-      "India won both the singles ties against West Germany on the first day in the Davis Cup inter-zone semi-final here today.",
-      "In the first match Ramanathan Krishnan crushed Wilhelm Bungert in straight sets — [unclear scores].",
-      "Jaidip Mukerjea, after being one set all at 1–1, rallied to beat [unclear] in a five-set victory [unclear scores].",
-      "Krishnan and Premjit Lall meet Bungert and [unclear] in the doubles match to be played tomorrow.",
-      "(Details on page 11.)"
-    ]
-  },
-  "robbery": {
-    "title": "Housy robber",
-    "byline": "MELBOURNE, Nov. 12 · Reuter",
-    "page": 1,
-    "note": "Best-effort transcription of the short report. The amount and the opening words of the quoted remark are indistinct in the scan.",
-    "paragraphs": [
-      "A bandit fired a sawn-off shotgun while raiding a betting shop of 2,200 [unclear] dollars (about [unclear]) in suburban Reservoir here today.",
-      "‘[Unclear], it was an accident,’ he told the frightened staff, before escaping."
-    ]
-  },
   "brighter": {
     "title": "A Brighter Tomorrow",
     "byline": "Editorial · The Sunday Standard · MADRAS, November 13, 1966",
@@ -92,15 +68,44 @@
       "It has now become almost a truism that political freedom remains incomplete so long as the nation does not win its economic freedom. Only with the attainment of economic freedom will the country come into its rightful heritage. We sacrifice today for a brighter tomorrow."
     ]
   },
-  "beatles": {
-    "title": "Beatles stay on",
-    "byline": "LONDON, Nov. 12 · AP",
-    "page": 7,
-    "note": "Best-effort transcription of a short page-seven dispatch. One sentence is partly illegible.",
+  "paddy": {
+    "title": "7,000 acres of paddy affected in Kottayam",
+    "byline": "KOTTAYAM, Nov. 12 · PTI",
+    "page": 3,
+    "note": "Best-effort transcription of the short page-three report. The final phrase is indistinct in the scan.",
     "paragraphs": [
-      "The definitive word has come from John Lennon: the Beatles are not breaking up.",
-      "‘I suppose we’re to go on being the four mop-tops,’ Lennon told newsmen.",
-      "The 26-year-old Lennon [unclear] that the famous quartet would not [unclear]."
+      "About 7,000 acres of paddy fields in the district are still under water as a result of floods caused by the recent rains.",
+      "If dewatering was not done within a week, the whole paddy crop would be lost. The cultivators are demanding supply of [unclear]."
+    ]
+  },
+  "economy": {
+    "title": "Economy drive",
+    "byline": "NEW DELHI, Nov. 12 · PTI",
+    "page": 3,
+    "note": "Transcription of a short page-three domestic brief. One part of the exception to the order is indistinct in the scan.",
+    "paragraphs": [
+      "A ban has been imposed for six months on the purchase of new furniture in Government offices.",
+      "An exception will however be made where [unclear].",
+      "This step has been taken to effect economy in Government expenditure."
+    ]
+  },
+  "temples": {
+    "title": "No poojas in over 1,000 temples",
+    "byline": "TRIVANDRUM, Nov. 12 · UNI",
+    "page": 3,
+    "note": "Best-effort transcription of the page-three report. Uncertain names and passages are marked [unclear]; original terminology is retained.",
+    "paragraphs": [
+      "Several of the more than 1,000 temples under the Travancore Devaswom Board will go without the daily poojas from next Monday after the comparative truce between the Board and its contingent employees for a wage hike failed today.",
+      "The [unclear] Parishad has decided to go on an indefinite general strike from Monday, demanding that the employees should be on a scale in force under devaswoms from Malabar area.",
+      "The association also announced that there would be more picketing in front of the Board office on Monday.",
+      "The employees in temples have been picketing their offices for the past four weeks. So far 220 of them have been arrested.",
+      "While the Board has [unclear] of 400 private temples under [unclear], it is continuing to provide them free wages or to ‘pandits and other staff’ under [unclear].",
+      "SEARCH FOR PRIESTS",
+      "According to a spokesman of the Board, in the event of the strike, the Board had to make some alternative arrangements in the form of pujas being done by retired [unclear] priests for conducting poojas.",
+      "The employees demand a [unclear] scale of forty rupees per month [unclear] Government orders [unclear].",
+      "This will entail the Board an additional expenditure of [unclear] lakhs annually. The Board derives its revenue exclusively from [unclear].",
+      "Now, in addition [unclear] the Board’s [unclear] annually. It has been paying a [unclear] at [unclear] rupees, in addition to its revenue from other sources distributed [unclear].",
+      "The Government has now informed the Board that the additional grant will be given to it."
     ]
   }
 }

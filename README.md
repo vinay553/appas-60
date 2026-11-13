@@ -2,6 +2,8 @@
 
 A newspaper reading edition based on The Sunday Standard, Madras, Sunday November 13, 1966, from The Indian Express archive. Seven selected articles, including the editorial A Brighter Tomorrow, with original flood photography above the lead article. Includes a zoomable original scan and the 16-page issue.
 
+The reading selection focuses on Indian domestic news: the Aliyar floods, Cabinet changes, Kottayam paddy fields, a government economy drive, Kerala temple services and the editorial. US spacemen take eclipse photos is the only international report. The former overseas robbery, Beatles and Davis Cup entries have been removed from the reading selection.
+
 Live: https://vinay553.github.io/appas-60/
 
 Buildless HTML, CSS and JavaScript. GitHub Pages serves the main branch root. No installation required.
