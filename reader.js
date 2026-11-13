@@ -13,8 +13,8 @@ const positions = {
   rhodesia: [0.89, 0.57], bpcc: [0.77, 0.45], sabotage: [0.27, 0.83],
   robbery: [0.15, 0.93], overseas: [0.89, 0.32]
 };
-const continuations = { city: 3, council: 6, space: 7 };
 let currentPage = 1;
+let startingPage = 1;
 let enlarged = true;
 let focusArticle = true;
 
@@ -30,7 +30,7 @@ function sourceForPage(page) {
 }
 
 function positionScan() {
-  const position = currentPage === 1 && focusArticle ? positions[articleKey] : null;
+  const position = currentPage === startingPage && focusArticle ? positions[articleKey] : null;
   viewport.scrollTo({ left: position ? position[0] * image.clientWidth : 0, top: position ? position[1] * image.clientHeight : 0 });
 }
 
@@ -65,35 +65,44 @@ zoom.addEventListener('click', () => {
 
 async function loadArticle() {
   try {
-    const response = await fetch('index.html');
-    if (!response.ok) throw new Error('Front page unavailable');
-    const documentSource = new DOMParser().parseFromString(await response.text(), 'text/html');
-    const story = [...documentSource.querySelectorAll('.story')].find((section) => section.id === articleKey || section.classList.contains(articleKey));
-    if (!story) {
-      document.querySelector('#article-title').textContent = 'The complete newspaper';
-      focusArticle = false;
+    const response = await fetch('articles.json');
+    if (!response.ok) throw new Error('Transcriptions unavailable');
+    const articles = await response.json();
+    const article = Object.hasOwn(articles, articleKey) ? articles[articleKey] : null;
+    if (!article) {
+      document.querySelector('#article-title').textContent = 'Article not found';
+      document.querySelector('#transcription-note').textContent = 'Return to the front page to choose one of the available transcriptions.';
+      showPage(1);
       return;
     }
-    const title = story.querySelector('h2').innerHTML.replace(/<br\s*\/?\s*>/gi, ' ');
-    const plainTitle = new DOMParser().parseFromString(title, 'text/html').body.textContent;
-    document.querySelector('#article-title').textContent = plainTitle;
-    document.title = `${plainTitle} · The Sunday Standard`;
-    document.querySelector('#article-byline').textContent = story.querySelector('.byline').textContent;
-    document.querySelector('#back-link').href = `index.html#${story.id || 'front-page'}`;
-    if (continuations[articleKey]) {
+    document.querySelector('#article-title').textContent = article.title;
+    document.title = `${article.title} · The Sunday Standard`;
+    document.querySelector('#article-byline').textContent = article.byline;
+    document.querySelector('#transcription-note').textContent = article.note;
+    const content = document.querySelector('#article-text');
+    article.paragraphs.forEach((text) => {
+      const paragraph = document.createElement('p');
+      paragraph.textContent = text;
+      content.append(paragraph);
+    });
+    document.querySelector('#back-link').href = `index.html#${articleKey === 'brighter' || articleKey === 'beatles' || articleKey === 'aliyar' ? articleKey : 'front-page'}`;
+    startingPage = article.page;
+    if (articleKey === 'brighter') positions.brighter = [0, 0.25];
+    if (articleKey === 'beatles') positions.beatles = [0.5, 0.65];
+    if (article.continuation) {
       continuation.hidden = false;
-      continuation.append('This report continues on ');
+      continuation.append('Original continuation: ');
       const button = document.createElement('button');
-      button.textContent = `page ${continuations[articleKey]} →`;
-      button.addEventListener('click', () => showPage(continuations[articleKey]));
+      button.textContent = `page ${article.continuation} →`;
+      button.addEventListener('click', () => showPage(article.continuation));
       continuation.append(button);
-      continuation.append('.');
     }
-    if (image.complete) positionScan();
+    showPage(article.page);
   } catch {
-    document.querySelector('#article-title').textContent = 'Original newspaper article';
+    document.querySelector('#article-title').textContent = 'Transcription unavailable';
+    document.querySelector('#transcription-note').textContent = 'The article text could not load. Please reload the page or compare with the original scan below.';
+    showPage(1);
   }
 }
 
-showPage(1);
 loadArticle();

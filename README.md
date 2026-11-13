@@ -1,12 +1,12 @@
 # The Sunday Standard — November 13, 1966
 
-A newspaper reading edition based on The Sunday Standard, Madras, Sunday November 13, 1966, from The Indian Express archive. Fourteen front-page reports, original flood photography and a period advertisement. Includes a zoomable original scan and links to the 16-page issue.
+A newspaper reading edition based on The Sunday Standard, Madras, Sunday November 13, 1966, from The Indian Express archive. Seven selected articles, including the editorial A Brighter Tomorrow, with original flood photography above the lead article. Includes a zoomable original scan and the 16-page issue.
 
 Live: https://vinay553.github.io/appas-60/
 
 Buildless HTML, CSS and JavaScript. GitHub Pages serves the main branch root. No installation required.
 
-Each Read more button opens a separate article reader at article.html?article=<key>. It displays the selected report's original newspaper page, initially scrolled to the article, with zoom and all 16 locally stored pages for continuation reading. Verified continuation shortcuts are provided for the Madras floods (page 3), United Nations election (page 6) and Gemini report (page 7). Original scans preserve the full reporting rather than presenting generated full-text transcriptions.
+Each Read more button opens a separate article reader at article.html?article=<key>. The reader displays selectable text from articles.json first, followed by a collapsed original-scan comparison. The article text is a best-effort OCR transcription checked against the scan; uncertain passages are marked [unclear], and incomplete transcription coverage is described per article. A Brighter Tomorrow is transcribed in full from the page-six editorial. All 16 locally stored scans remain available in the comparison reader.
 
 ## Sources
 
