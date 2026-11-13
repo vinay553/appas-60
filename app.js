@@ -1,16 +1,22 @@
 const archive = document.querySelector('#archive');
-const archiveButton = document.querySelector('#archive-button');
 const zoomButton = document.querySelector('#zoom-button');
 const originalScan = document.querySelector('#original-scan');
+let openingControl;
 
-archiveButton.addEventListener('click', () => {
+function openArchive(event) {
+  event.preventDefault();
+  openingControl = event.currentTarget;
   archive.showModal();
   document.body.classList.add('modal-open');
+}
+
+document.querySelectorAll('[data-original], #archive-button, #second-archive-button').forEach((control) => {
+  control.addEventListener('click', openArchive);
 });
 document.querySelector('#close-archive').addEventListener('click', () => archive.close());
 archive.addEventListener('close', () => {
   document.body.classList.remove('modal-open');
-  archiveButton.focus();
+  openingControl?.focus();
 });
 archive.addEventListener('click', (event) => {
   if (event.target === archive) {
@@ -21,6 +27,6 @@ archive.addEventListener('click', (event) => {
 zoomButton.addEventListener('click', () => {
   const enlarged = originalScan.classList.toggle('enlarged');
   zoomButton.setAttribute('aria-pressed', String(enlarged));
-  zoomButton.textContent = enlarged ? 'Fit scan −' : 'Enlarge scan +';
+  zoomButton.textContent = enlarged ? 'Fit page −' : 'Enlarge to read +';
 });
 document.querySelector('#print-button').addEventListener('click', () => window.print());
