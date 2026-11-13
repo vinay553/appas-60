@@ -6,6 +6,8 @@ Live: https://vinay553.github.io/appas-60/
 
 Buildless HTML, CSS and JavaScript. GitHub Pages serves the main branch root. No installation required.
 
+Canonical article links are now standalone pages in articles/<key>.html. Each includes its heading, metadata and every transcription paragraph in HTML and loads no JavaScript. These are the primary reading pages; the older query-based reader is retained for older links and redirects missing legacy content to the standalone pages. Keep the standalone HTML and articles.json in sync when editing transcriptions.
+
 Each Read more button opens the article reader at article.html?article=<key>#<key>. Transcriptions are embedded directly in the HTML so reading does not depend on JavaScript or a JSON fetch. JavaScript selects the requested article and enhances the collapsed original-scan comparison. articles.json is the transcription source; keep its text in sync with the embedded sections. Reader script URLs are versioned to avoid stale GitHub Pages browser caches. Uncertain passages are marked [unclear], and incomplete transcription coverage is described per article. A Brighter Tomorrow is transcribed in full from the page-six editorial. All 16 locally stored scans remain available in the comparison reader.
 
 ## Sources

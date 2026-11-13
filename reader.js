@@ -68,6 +68,10 @@ function loadArticle() {
     const entries = [...document.querySelectorAll('.transcript-entry')];
     const selected = entries.find((entry) => entry.id === articleKey);
     if (!selected) {
+      if (['aliyar', 'cabinet', 'space', 'davis', 'robbery', 'brighter', 'beatles'].includes(articleKey)) {
+        window.location.replace(`articles/${encodeURIComponent(articleKey)}.html`);
+        return;
+      }
       document.querySelector('#transcription-note').textContent = 'Choose an article from the front page, or read the transcriptions below.';
       showPage(1);
       return;
