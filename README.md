@@ -1,6 +1,6 @@
 # The Sunday Standard — November 13, 1966
 
-A newspaper reading edition based on The Sunday Standard, Madras, Sunday November 13, 1966, from The Indian Express archive. Seven selected reading entries, including the editorial A Brighter Tomorrow. The lead is the positive opening announcement for Coimbatore’s Chinthamani Co-operative Super Market, with its original building illustration above it. The announcement is explicitly labeled as an original advertisement. Includes a zoomable original scan and the 16-page issue.
+A newspaper reading edition based on The Sunday Standard, Madras, Sunday November 13, 1966, from The Indian Express archive. Six selected reading entries, led by the complete, readable editorial A Brighter Tomorrow and a clipping of its original newspaper column. Includes a zoomable original scan and the 16-page issue.
 
 The reading selection focuses on Indian domestic material: the Chinthamani opening, Cabinet changes, an exhibition of Nehru’s writings, a government economy drive, Kerala temple services and the editorial. US spacemen take eclipse photos is the only international report. The former overseas robbery, Beatles and Davis Cup entries have been removed from the reading selection. The brief Kottayam paddy report was replaced with the more recoverable page-seven Nehru exhibition article; the flood lead was replaced with the fully readable main Chinthamani opening announcement on page five. Smaller institutional copy below that announcement is excluded from the transcription.
 
