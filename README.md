@@ -6,6 +6,8 @@ Live: https://vinay553.github.io/appas-60/
 
 Buildless HTML, CSS and JavaScript. GitHub Pages serves the main branch root. No installation required.
 
+Each Read more button opens a separate article reader at article.html?article=<key>. It displays the selected report's original newspaper page, initially scrolled to the article, with zoom and all 16 locally stored pages for continuation reading. Verified continuation shortcuts are provided for the Madras floods (page 3), United Nations election (page 6) and Gemini report (page 7). Original scans preserve the full reporting rather than presenting generated full-text transcriptions.
+
 ## Sources
 
 - Issue and original articles: https://books.google.com/books?id=f5FlAAAAIBAJ&pg=PA1

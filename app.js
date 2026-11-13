@@ -10,7 +10,7 @@ function openArchive(event) {
   document.body.classList.add('modal-open');
 }
 
-document.querySelectorAll('[data-original], #archive-button, #second-archive-button').forEach((control) => {
+document.querySelectorAll('#archive-button, #second-archive-button').forEach((control) => {
   control.addEventListener('click', openArchive);
 });
 document.querySelector('#close-archive').addEventListener('click', () => archive.close());
