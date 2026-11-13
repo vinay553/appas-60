@@ -68,7 +68,7 @@ function loadArticle() {
     const entries = [...document.querySelectorAll('.transcript-entry')];
     const selected = entries.find((entry) => entry.id === articleKey);
     if (!selected) {
-      if (['aliyar', 'cabinet', 'space', 'brighter', 'paddy', 'economy', 'temples'].includes(articleKey)) {
+      if (['aliyar', 'cabinet', 'space', 'brighter', 'nehru', 'economy', 'temples'].includes(articleKey)) {
         window.location.replace(`articles/${encodeURIComponent(articleKey)}.html`);
         return;
       }
